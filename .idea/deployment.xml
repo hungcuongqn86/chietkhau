@@ -1,15 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="PublishConfigData" serverName="php247">
+  <component name="PublishConfigData" serverName="php">
     <serverData>
-      <paths name="asv-alexa">
-        <serverdata>
-          <mappings>
-            <mapping local="$PROJECT_DIR$" web="/" />
-          </mappings>
-        </serverdata>
-      </paths>
-      <paths name="php247">
+      <paths name="php">
         <serverdata>
           <mappings>
             <mapping local="$PROJECT_DIR$" web="/" />

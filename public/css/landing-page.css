@@ -3,6 +3,7 @@
  * Copyright 2013-2019 Start Bootstrap
  * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-landing-page/blob/master/LICENSE)
  */
+@import url('https://fonts.googleapis.com/css2?family=Saira+Stencil+One&display=swap');
 
 body {
   font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
@@ -29,7 +30,7 @@ header.masthead {
 
 header.masthead .overlay {
   position: absolute;
-  background-color: #212529;
+  background-color: #024f9c;
   height: 100%;
   width: 100%;
   top: 0;
@@ -38,7 +39,8 @@ header.masthead .overlay {
 }
 
 header.masthead h1 {
-  font-size: 2rem;
+  font-size: 18px;
+    text-shadow: 1px 1px 1px #000;
 }
 
 @media (min-width: 768px) {
@@ -47,7 +49,7 @@ header.masthead h1 {
     padding-bottom: 12rem;
   }
   header.masthead h1 {
-    font-size: 3rem;
+    font-size: 18px;
   }
 }
 
@@ -123,4 +125,9 @@ header.masthead h1 {
 footer.footer {
   padding-top: 4rem;
   padding-bottom: 4rem;
+}
+
+.btn-auth {
+    font-size: 14px;
+    background-color: #3a506b;
 }

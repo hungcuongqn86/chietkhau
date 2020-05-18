@@ -45,6 +45,12 @@
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav mr-auto">
                         <li class="nav-item">
+                            <a class="nav-link" href="#">Giới thiệu</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Tin tức</a>
+                        </li>
+                        <li class="nav-item">
                             <a class="nav-link" href="#">Đơn hàng</a>
                         </li>
                         <li class="nav-item">

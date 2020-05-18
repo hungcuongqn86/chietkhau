@@ -76,11 +76,11 @@
                     <!-- Authentication Links -->
                     @guest
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ route('login') }}">Đăng nhập</a>
+                            <a class="btn btn-primary btn-auth" href="{{ route('login') }}">Đăng nhập </a>
                         </li>
                         @if (Route::has('register'))
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ route('register') }}">Đăng ký</a>
+                                <a class="btn btn-primary btn-auth" href="{{ route('register') }}">Đăng ký</a>
                             </li>
                         @endif
                     @else

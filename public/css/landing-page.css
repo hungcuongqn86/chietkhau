@@ -64,7 +64,7 @@ header.masthead h1 {
 
 @media (min-width: 768px) {
   .showcase .showcase-text {
-    padding: 7rem;
+    padding: 2rem;
   }
 }
 
@@ -91,7 +91,7 @@ header.masthead h1 {
 
 .testimonials {
   padding-top: 7rem;
-  padding-bottom: 7rem;
+  padding-bottom: 1rem;
 }
 
 .testimonials .testimonial-item {
@@ -114,12 +114,12 @@ header.masthead h1 {
 
 .call-to-action .overlay {
   position: absolute;
-  background-color: #212529;
+  background-color: #3a506b;
   height: 100%;
   width: 100%;
   top: 0;
   left: 0;
-  opacity: 0.3;
+  opacity: 0.8;
 }
 
 footer.footer {
@@ -127,7 +127,21 @@ footer.footer {
   padding-bottom: 4rem;
 }
 
-.btn-auth {
-    font-size: 14px;
-    background-color: #3a506b;
+.btn-primary:hover {
+	background-color: #1d7944;
+	border-color: #1d7944;
+}
+
+.btn-primary {
+    background-color: #2d995b;
+	border-color: #2d995b;
+	margin: 0 3px;
+}
+
+.text-primary {
+    color: #3a506b !important;
+}
+
+a {
+    color: #3a506b;
 }

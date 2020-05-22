@@ -3,14 +3,14 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="Mua hàng taobao, 1688 với chiết khấu cao">
+    <meta name="description" content="Mua hàng taobao, tmall, 1688 với chiết khấu cao">
     <meta name="author" content="">
 
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
 	<link rel="shortcut icon" type="image/png" href="img/discount16.png"/>
-    <title>Chiết khấu taobao, 1688</title>
+    <title>Chiết khấu taobao, tmall, 1688</title>
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
@@ -77,11 +77,11 @@
                     <!-- Authentication Links -->
                     @guest
                         <li class="nav-item">
-                            <a class="btn btn-primary btn-auth" href="{{ route('login') }}">Đăng nhập </a>
+                            <a class="btn btn-primary" href="{{ route('login') }}">Đăng nhập </a>
                         </li>
                         @if (Route::has('register'))
                             <li class="nav-item">
-                                <a class="btn btn-primary btn-auth" href="{{ route('register') }}">Đăng ký</a>
+                                <a class="btn btn-primary" href="{{ route('register') }}">Đăng ký</a>
                             </li>
                         @endif
                     @else

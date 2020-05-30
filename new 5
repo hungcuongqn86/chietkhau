@@ -2,3 +2,8 @@
 appID: 1414400150
 App Key: 30074478
 App Secret: c066725d2eb12a5c296b5fc240a210ba
+
+
+
+
+Ứng dụng của tôi là kênh giao tiếp về sản phẩm giữa tôi với các đại lý của tôi, tôi là người mua hàng và phân phối cho họ, khi nguồn hàng có thay đổi thông tin về giá, khuyến mãi, chiết khấu thì ứng dụng sẽ thông tin nhanh nhất tới các đại lý, ứng dụng của tôi cần gọi vào api lấy thông tin chi tiết sản phẩm để thông báo cho các đại lý

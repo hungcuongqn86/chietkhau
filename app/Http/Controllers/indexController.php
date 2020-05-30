@@ -36,12 +36,18 @@ class IndexController extends Controller
         $c->appkey = '30074478';
         $c->secretKey = 'c066725d2eb12a5c296b5fc240a210ba';
 
-        $req = new \HttpdnsGetRequest;
+        /*$req = new \HttpdnsGetRequest;
 
         $req->putOtherTextParam("name","test");
         $req->putOtherTextParam("value",0);
 
-        var_dump($c->execute($req));
+        var_dump($c->execute($req));*/
+
+        $req = new \TbkItemInfoGetRequest;
+        $req->setNumIids("610903374055");
+        $req->setPlatform("1");
+        $req->setIp("11.22.33.43");
+        $resp = $c->execute($req);
 
 
         /*$client = new Client([

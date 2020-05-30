@@ -7,7 +7,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-xl-9 mx-auto">
-                    <h1 class="mb-5">Nhập link <span style="color: #FF5000;">taobao</span>, <span style="color: #FF5000;">1688</span> để nhận link chiết khấu!</h1>
+                    <h1 class="mb-5">Nhập link sản phẩm <span style="color: #FF5000;">taobao</span>, <span style="color: #FF5000;">tmall</span>, <span style="color: #FF5000;">1688</span> để nhận link chiết khấu!</h1>
                 </div>
                 <div class="col-md-10 col-lg-8 col-xl-7 mx-auto">
                     <form>
@@ -31,32 +31,32 @@
             <div class="row">
                 <div class="col-lg-4">
                     <div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">
-                        <div class="features-icons-icon d-flex">
+                        <div class="features-icons-icon">
                             <!--<i class="icon-screen-desktop m-auto text-primary"></i>-->
-							<img src="img/1688/1688_512.png" class="img-fluid">
+							<img src="img/taobao/taobao_512.png" class="img-fluid img-thumbnail img-100">
                         </div>
-                        <h3>Fully Responsive</h3>
-                        <p class="lead mb-0">This theme will look great on any device, no matter the size!</p>
+                        <h3>Taobao</h3>
+                        <p class="lead mb-0"><a href="https://world.taobao.com/">taobao.com</a></p>
                     </div>
                 </div>
                 <div class="col-lg-4">
                     <div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">
-                        <div class="features-icons-icon d-flex">
+                        <div class="features-icons-icon">
                             <!--<i class="icon-layers m-auto text-primary"></i>-->
-							<img src="img/1688/1688_512.png" class="img-fluid">
+							<img src="img/tmall/tmall_512.png" class="img-fluid img-thumbnail img-100">
                         </div>
-                        <h3>Bootstrap 4 Ready</h3>
-                        <p class="lead mb-0">Featuring the latest build of the new Bootstrap 4 framework!</p>
+                        <h3>Tmall</h3>
+                        <p class="lead mb-0"><a href="https://www.tmall.com/">tmall.com</a></p>
                     </div>
                 </div>
                 <div class="col-lg-4">
                     <div class="features-icons-item mx-auto mb-0 mb-lg-3">
-                        <div class="features-icons-icon d-flex">
+                        <div class="features-icons-icon">
                             <!--<i class="icon-check m-auto text-primary"></i>-->
-							<img src="img/1688/1688_512.png" class="img-fluid">
+							<img src="img/1688/1688_512.png" class="img-fluid img-thumbnail img-100">
                         </div>
-                        <h3>Easy to Use</h3>
-                        <p class="lead mb-0">Ready to use with your own content, or customize the source files!</p>
+                        <h3>1688</h3>
+                        <p class="lead mb-0"><a href="https://www.1688.com/">1688.com</a></p>
                     </div>
                 </div>
             </div>
@@ -68,23 +68,23 @@
         <div class="container">
             <div class="row no-gutters">
 
-                <div class="col-lg-6 order-lg-2 text-white showcase-img" style="background-image: url('img/bg-showcase-1.jpg');"></div>
+                <div class="col-lg-6 order-lg-2 text-white showcase-img" style="background-image: url('img/chiet_khau_cao.jpg');"></div>
                 <div class="col-lg-6 order-lg-1 my-auto showcase-text">
-                    <h2>Fully Responsive Design</h2>
+                    <h2>Chiết khấu cao</h2>
                     <p class="lead mb-0">When you use a theme created by Start Bootstrap, you know that the theme will look great on any device, whether it's a phone, tablet, or desktop the page will behave responsively!</p>
                 </div>
             </div>
             <div class="row no-gutters">
-                <div class="col-lg-6 text-white showcase-img" style="background-image: url('img/bg-showcase-2.jpg');"></div>
+                <div class="col-lg-6 text-white showcase-img" style="background-image: url('img/de_dang_sd.jpg');"></div>
                 <div class="col-lg-6 my-auto showcase-text">
-                    <h2>Updated For Bootstrap 4</h2>
+                    <h2>Dễ dàng sử dụng</h2>
                     <p class="lead mb-0">Newly improved, and full of great utility classes, Bootstrap 4 is leading the way in mobile responsive web development! All of the themes on Start Bootstrap are now using Bootstrap 4!</p>
                 </div>
             </div>
             <div class="row no-gutters">
-                <div class="col-lg-6 order-lg-2 text-white showcase-img" style="background-image: url('img/bg-showcase-3.jpg');"></div>
+                <div class="col-lg-6 order-lg-2 text-white showcase-img" style="background-image: url('img/rut_tien.jpg');"></div>
                 <div class="col-lg-6 order-lg-1 my-auto showcase-text">
-                    <h2>Easy to Use &amp; Customize</h2>
+                    <h2>Tiền rút về nhanh chóng</h2>
                     <p class="lead mb-0">Landing Page is just HTML and CSS with a splash of SCSS for users who demand some deeper customization options. Out of the box, just add your content and images, and your new landing page will be ready to go!</p>
                 </div>
             </div>
@@ -97,16 +97,16 @@
         <div class="container">
             <div class="row">
                 <div class="col-xl-9 mx-auto">
-                    <h2 class="mb-4">Ready to get started? Sign up now!</h2>
+                    <h2 class="mb-4">Đăng ký tài khoản để nhận chiết khấu khi mua hàng! <br><span style="color: #FF5000;">Đăng ký ngay và luôn!</span></h2>
                 </div>
                 <div class="col-md-10 col-lg-8 col-xl-7 mx-auto">
                     <form>
                         <div class="form-row">
                             <div class="col-12 col-md-9 mb-2 mb-md-0">
-                                <input type="email" class="form-control form-control-lg" placeholder="Enter your email...">
+                                <input type="email" class="form-control form-control-lg" placeholder="Nhập email của bạn...">
                             </div>
                             <div class="col-12 col-md-3">
-                                <button type="submit" class="btn btn-block btn-lg btn-primary">Sign up!</button>
+                                <button type="submit" class="btn btn-block btn-lg btn-primary">Đăng ký!</button>
                             </div>
                         </div>
                     </form>

@@ -54,7 +54,7 @@
                             <a class="nav-link" href="#">Giới thiệu</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Tin tức</a>
+                            <a class="nav-link" href="#">Hướng dẫn</a>
                         </li>
                     @else
                         <li class="nav-item">
@@ -74,6 +74,9 @@
 
                 <!-- Right Side Of Navbar -->
                 <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="btn btn-primary" href="{{ route('login') }}">Công cụ </a>
+                    </li>
                     <!-- Authentication Links -->
                     @guest
                         <li class="nav-item">
@@ -118,38 +121,42 @@
             <div class="col-lg-6 h-100 text-center text-lg-left my-auto">
                 <ul class="list-inline mb-2">
                     <li class="list-inline-item">
-                        <a href="#">About</a>
+                        <a href="#">Giới thiệu</a>
                     </li>
                     <li class="list-inline-item">&sdot;</li>
                     <li class="list-inline-item">
-                        <a href="#">Contact</a>
+                        <a href="#">Liên hệ</a>
                     </li>
                     <li class="list-inline-item">&sdot;</li>
                     <li class="list-inline-item">
-                        <a href="#">Terms of Use</a>
+                        <a href="#">Hướng dẫn</a>
                     </li>
                     <li class="list-inline-item">&sdot;</li>
                     <li class="list-inline-item">
-                        <a href="#">Privacy Policy</a>
+                        <a href="#">Tin tức</a>
+                    </li>
+                    <li class="list-inline-item">&sdot;</li>
+                    <li class="list-inline-item">
+                        <a href="#">Chính sách</a>
                     </li>
                 </ul>
-                <p class="text-muted small mb-4 mb-lg-0">&copy; Your Website 2019. All Rights Reserved.</p>
+                <p class="text-muted small mb-4 mb-lg-0">&copy; chietkhautaobao.com.vn 2020. All Rights Reserved.</p>
             </div>
             <div class="col-lg-6 h-100 text-center text-lg-right my-auto">
                 <ul class="list-inline mb-0">
                     <li class="list-inline-item mr-3">
                         <a href="#">
-                            <i class="fab fa-facebook fa-2x fa-fw"></i>
+                            <img src="img/zalo.png" class="img-fluid img-thumbnail img-footer-social">
                         </a>
                     </li>
                     <li class="list-inline-item mr-3">
                         <a href="#">
-                            <i class="fab fa-twitter-square fa-2x fa-fw"></i>
+                            <img src="img/wechat.png" class="img-fluid img-thumbnail img-footer-social">
                         </a>
                     </li>
                     <li class="list-inline-item">
                         <a href="#">
-                            <i class="fab fa-instagram fa-2x fa-fw"></i>
+                            <img src="img/messenger.png" class="img-fluid img-thumbnail img-footer-social">
                         </a>
                     </li>
                 </ul>

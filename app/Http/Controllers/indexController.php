@@ -32,6 +32,18 @@ class IndexController extends Controller
      */
     public function index()
     {
+        $c = new \TopClient;
+        $c->appkey = '30074478';
+        $c->secretKey = 'c066725d2eb12a5c296b5fc240a210ba';
+
+        $req = new \HttpdnsGetRequest;
+
+        $req->putOtherTextParam("name","test");
+        $req->putOtherTextParam("value",0);
+
+        var_dump($c->execute($req));
+
+
         /*$client = new Client([
             'cookies' => $this->jar,
         ]);

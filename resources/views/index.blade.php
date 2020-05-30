@@ -84,7 +84,7 @@
             <div class="row no-gutters">
                 <div class="col-lg-6 order-lg-2 text-white showcase-img" style="background-image: url('img/rut_tien.jpg');"></div>
                 <div class="col-lg-6 order-lg-1 my-auto showcase-text">
-                    <h2>Tiền rút về nhanh chóng</h2>
+                    <h2>Tiền rút về tài khoản nhanh - an toàn</h2>
                     <p class="lead mb-0">Landing Page is just HTML and CSS with a splash of SCSS for users who demand some deeper customization options. Out of the box, just add your content and images, and your new landing page will be ready to go!</p>
                 </div>
             </div>
@@ -100,16 +100,11 @@
                     <h2 class="mb-4">Đăng ký tài khoản để nhận chiết khấu khi mua hàng! <br><span style="color: #FF5000;">Đăng ký ngay và luôn!</span></h2>
                 </div>
                 <div class="col-md-10 col-lg-8 col-xl-7 mx-auto">
-                    <form>
-                        <div class="form-row">
-                            <div class="col-12 col-md-9 mb-2 mb-md-0">
-                                <input type="email" class="form-control form-control-lg" placeholder="Nhập email của bạn...">
-                            </div>
-                            <div class="col-12 col-md-3">
-                                <button type="submit" class="btn btn-block btn-lg btn-primary">Đăng ký!</button>
-                            </div>
+                    <div class="form-row">
+                        <div class="col-12 col-md-3" style="margin: auto;">
+                            <button type="submit" class="btn btn-block btn-lg btn-primary">Đăng ký!</button>
                         </div>
-                    </form>
+                    </div>
                 </div>
             </div>
         </div>

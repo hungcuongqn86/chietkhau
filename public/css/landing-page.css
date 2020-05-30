@@ -35,7 +35,7 @@ header.masthead .overlay {
   width: 100%;
   top: 0;
   left: 0;
-  opacity: 0.8;
+  opacity: 0.9;
 }
 
 header.masthead h1 {
@@ -127,6 +127,10 @@ footer.footer {
   padding-bottom: 4rem;
 }
 
+li.nav-item {
+    margin: 3px;
+}
+
 .btn-primary:hover {
 	background-color: #1d7944;
 	border-color: #1d7944;
@@ -135,7 +139,6 @@ footer.footer {
 .btn-primary {
     background-color: #2d995b;
 	border-color: #2d995b;
-	margin: 0 3px;
 }
 
 .text-primary {

@@ -9,27 +9,23 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-	<link rel="shortcut icon" type="image/png" href="img/discount16.png"/>
+	<link rel="shortcut icon" type="image/png" href="{{ asset('img/discount16.png') }}"/>
     <title>Chiết khấu taobao, tmall, 1688</title>
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
 
-    <!-- Fonts -->
-{{--<link rel="dns-prefetch" href="//fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">--}}
-
-<!-- Styles -->
+    <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 
     <!-- Custom fonts for this template -->
-    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
-    <link href="vendor/simple-line-icons/css/simple-line-icons.css" rel="stylesheet" type="text/css">
+    <link href="{{ asset('vendor/fontawesome-free/css/all.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('vendor/simple-line-icons/css/simple-line-icons.css') }}" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet"
           type="text/css">
 
     <!-- Custom styles for this template -->
-    <link href="css/landing-page.css" rel="stylesheet">
+    <link href="{{ asset('css/landing-page.css') }}" rel="stylesheet">
 </head>
 <body>
 <div id="app">
@@ -75,7 +71,10 @@
                 <!-- Right Side Of Navbar -->
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
-                        <a class="btn btn-primary" href="{{ route('login') }}">Công cụ </a>
+                        <a class="btn btn-primary" href="{{ route('login') }}">
+                            <i class="fas fa-puzzle-piece fa-2x fa-fw" style="color: gold;"></i>
+                            <br> Công cụ
+                        </a>
                     </li>
                     <!-- Authentication Links -->
                     @guest
@@ -146,17 +145,17 @@
                 <ul class="list-inline mb-0">
                     <li class="list-inline-item mr-3">
                         <a href="#">
-                            <img src="img/zalo.png" class="img-fluid img-thumbnail img-footer-social">
+                            <img src="{{ asset('img/zalo.png') }}" class="img-fluid img-thumbnail img-footer-social">
                         </a>
                     </li>
                     <li class="list-inline-item mr-3">
                         <a href="#">
-                            <img src="img/wechat.png" class="img-fluid img-thumbnail img-footer-social">
+                            <img src="{{ asset('img/wechat.png') }}" class="img-fluid img-thumbnail img-footer-social">
                         </a>
                     </li>
                     <li class="list-inline-item">
                         <a href="#">
-                            <img src="img/messenger.png" class="img-fluid img-thumbnail img-footer-social">
+                            <img src="{{ asset('img/messenger.png') }}" class="img-fluid img-thumbnail img-footer-social">
                         </a>
                     </li>
                 </ul>

@@ -3,17 +3,10 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use GuzzleHttp\Client;
-use GuzzleHttp\Cookie\CookieJar;
 use Illuminate\Support\Facades\Cache;
 
 class IndexController extends Controller
 {
-    const URL_LOGIN = "http://chietkhau1688.com/login";
-    const username = "Nguyễn Cường";
-    const password = "dienvyhoa@2020";
-
-    public $jar;
     /**
      * Create a new controller instance.
      *
@@ -22,7 +15,6 @@ class IndexController extends Controller
     public function __construct()
     {
         // $this->middleware('auth');
-        $this->jar = new CookieJar();
     }
 
     /**
@@ -32,52 +24,22 @@ class IndexController extends Controller
      */
     public function index()
     {
-        $c = new \TopClient;
-        $c->appkey = '30074478';
-        $c->secretKey = 'c066725d2eb12a5c296b5fc240a210ba';
-
-        /*$req = new \TbkItemInfoGetRequest;
-        $req->setNumIids("610903374055");
-        $req->setPlatform("1");
-        $req->setIp("11.22.33.43");
-        $resp = $c->execute($req);*/
-
-        $req = new \TbkDgOptimusMaterialRequest;
-        $req->setPageSize("20");
-        $req->setAdzoneId("110148550222");
-        $req->setPageNo("1");
-        $req->setMaterialId("13256");
-        $req->setItemId("618962533617");
-        // $req->setQ("610903374055");
-        // $req->setMaterialId("610903374055");
-        $resp = $c->execute($req);
-        echo "<pre>";
-        var_dump($resp);
-
-
-        /*$client = new Client([
-            'cookies' => $this->jar,
-        ]);
-        $client->request('POST', self::URL_LOGIN, [
-            'form_params' => [
-                'LoginForm' => [
-                    'username' => self::username,
-                    'password' => self::password,
-                    'rememberMe' => 0
-                ]
-            ]
-        ]);
-
-        Cache::put('taobao_cookies', $this->jar, now()->addMinutes(60));*/
-
-        /*$cacheJar = Cache::get('taobao_cookies');
-
-        $client1 = new Client(array(
-            'cookies' => $cacheJar
-        ));
-
-        $response = $client1->request('GET', 'http://chietkhau1688.com/rut-tien');
-        dd($response->getBody()->getContents());*/
         return view('index');
+    }
+
+    public function shareLink($id, $response = 'html')
+    {
+        $cookie_file = dirname(__FILE__) . '/' . 'cookie.txt';
+        $curl = curl_init();
+        curl_setopt($curl, CURLOPT_URL, "http://pub.alimama.com/openapi/param2/1/gateway.unionpub/shareitem.json?shareUserType=1&unionBizCode=union_pub&shareSceneCode=item_search&materialId=" . $id . "&tkClickSceneCode=qtz_pub_search&siteId=1414400150&adzoneId=110148550222&materialType=1&needQueryQtz=true");
+        curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
+        curl_setopt($curl, CURLOPT_COOKIEFILE, $cookie_file);
+        curl_setopt($curl, CURLOPT_COOKIEJAR, $cookie_file);
+        $data = curl_exec($curl);
+        curl_close($curl);
+        if ($response == 'json') {
+            return response()->json(json_decode($data, true)['data']);
+        }
+        return view('share_link', ['data' => json_decode($data, true)['data']]);
     }
 }

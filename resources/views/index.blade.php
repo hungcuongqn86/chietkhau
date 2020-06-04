@@ -10,7 +10,7 @@
                     <h1 class="mb-5">Nhập link sản phẩm <span style="color: #FF5000;">taobao</span>, <span style="color: #FF5000;">tmall</span>, <span style="color: #FF5000;">1688</span> để nhận link chiết khấu!</h1>
                 </div>
                 <div class="col-md-10 col-lg-8 col-xl-7 mx-auto">
-                    <form>
+                    <form id="search_form">
                         <div class="form-row">
                             <div class="col-12 col-md-9 mb-2 mb-md-0">
                                 <input type="text" class="form-control form-control-lg" id="url" name="url" placeholder="Nhập link sản phẩm cần mua...">

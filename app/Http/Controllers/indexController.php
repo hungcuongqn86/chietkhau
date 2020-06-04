@@ -40,7 +40,7 @@ class IndexController extends Controller
         if ($response == 'json') {
             return response()->json(json_decode($data, true)['data']);
         }
-        dd(json_decode($data, true)['data']);
+        // dd(json_decode($data, true)['data']);
         return view('share_link', ['data' => json_decode($data, true)['data']]);
     }
 }

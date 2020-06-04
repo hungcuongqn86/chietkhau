@@ -3,10 +3,17 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use GuzzleHttp\Client;
+use GuzzleHttp\Cookie\CookieJar;
 use Illuminate\Support\Facades\Cache;
 
 class IndexController extends Controller
 {
+    const URL_LOGIN = "http://chietkhau1688.com/login";
+    const username = "Nguyễn Cường";
+    const password = "dienvyhoa@2020";
+
+    public $jar;
     /**
      * Create a new controller instance.
      *
@@ -15,6 +22,7 @@ class IndexController extends Controller
     public function __construct()
     {
         // $this->middleware('auth');
+        $this->jar = new CookieJar();
     }
 
     /**
@@ -24,6 +32,15 @@ class IndexController extends Controller
      */
     public function index()
     {
+        /*$c = new \TopClient;
+        $c->appkey = '30074478';
+        $c->secretKey = 'c066725d2eb12a5c296b5fc240a210ba';
+
+        $req = new \TbkActivityInfoGetRequest;
+        $req->setAdzoneId("110148550222");
+        $req->setActivityMaterialId("557706784511");
+        $resp = $c->execute($req);
+        dd($resp);*/
         return view('index');
     }
 

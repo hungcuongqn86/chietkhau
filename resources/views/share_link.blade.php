@@ -1,6 +1,16 @@
 <div class="card chietkhau-card">
     <div class="card-body">
+        @if(!empty($data))
         <div class="input-group mb-12">
+            @guest
+                <div class="alert alert-danger">
+                    <h5>
+                        <i class="icon fas fa-ban"></i> Cảnh báo
+                    </h5>
+                    Hệ thống không thể ghép đơn hàng! Vui lòng đăng nhập tài khoản trước khi mở link chiết khấu
+                </div>
+            @endguest
+
             <div class="phone-box chietkhau-box">
                 <div class="input-group">
                     <div class="input-group-prepend">
@@ -29,5 +39,12 @@
                 <h3>{{$data->title}}</h3>
             </a>
         </div>
+        @else
+            <div class="input-group mb-12">
+                <div class="alert alert-danger alert-dismissible">
+                    Không tìm thấy link sản phẩm thích hợp!
+                </div>
+            </div>
+        @endif
     </div>
 </div>

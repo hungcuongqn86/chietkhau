@@ -17,7 +17,7 @@ $(document).ready(function () {
             return;
         }
         showLoading();
-        var url = './api/sharelink/';
+        var url = './sharelink/';
         $.ajax({
             url: url,
             type: 'GET',
@@ -30,6 +30,9 @@ $(document).ready(function () {
                     backdrop: 'static',
                     keyboard: false
                 }).show();
+                hideLoading();
+            },
+            error: function (xhr, ajaxOptions, thrownError) {
                 hideLoading();
             }
         });

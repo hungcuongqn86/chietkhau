@@ -17,6 +17,7 @@ Route::group([
     'namespace' => '\App\Http\Controllers'
 ], function () {
     Route::get('/', 'IndexController@index');
+    Route::get('/sharelink/{response?}', 'IndexController@shareLink');
 });
 
 Auth::routes();

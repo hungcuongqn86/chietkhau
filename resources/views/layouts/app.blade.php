@@ -94,10 +94,15 @@
                             </a>
 
                             <div style="top: 50%;" class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="">
+                                    <i class="fas fa-user"></i>
+                                    Thông tin tài khoản
+                                </a>
                                 <a class="dropdown-item" href="{{ route('logout') }}"
                                    onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
-                                    {{ __('Logout') }}
+                                    <i class="fas fa-sign-out-alt"></i>
+                                    Đăng xuất
                                 </a>
 
                                 <form id="logout-form" action="{{ route('logout') }}" method="POST"

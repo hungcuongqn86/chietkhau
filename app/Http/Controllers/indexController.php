@@ -74,6 +74,7 @@ class IndexController extends Controller
         if ($response == 'json') {
             return response()->json($data);
         }
+
         // dd($data);
         return view('share_link', ['data' => $data]);
     }

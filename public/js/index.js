@@ -1,21 +1,29 @@
 $(document).ready(function () {
     "use strict";
+    $('#url-warning').hide();
 
     $(document).on('click', '#btn-search', function (e) {
         e.preventDefault();
+        $('#url-warning').hide();
+        if($('#url').val() == ''){
+            $('#url-warning').show().text('Phải nhập đường dẫn sản phẩm cần mua!');
+            $('#url').focus();
+            return;
+        }
+
         if(!validURL($('#url').val())){
-            alert("Đường dẫn không đúng định dạng!");
+            $('#url-warning').show().text('Đường dẫn không đúng định dạng!');
             $('#url').focus();
             return;
         }
         showLoading();
-        var url = './api/sharelink/557706784511';
+        var url = './api/sharelink/';
         $.ajax({
             url: url,
             type: 'GET',
             loading: true,
             dataType: "html",
-            data: {},
+            data: {url: $('#url').val()},
             success: function (html) {
                 $('#shareLinkModalBody').html(html);
                 $('#shareLinkModal').modal({

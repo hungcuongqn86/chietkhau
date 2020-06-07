@@ -16,7 +16,7 @@
   "permissions": [
     "activeTab",
     "tabs",
-    "https://www.google.com/"
+    "http://pub.alimama.com/"
   ],
   "content_scripts": [
     {
@@ -27,7 +27,7 @@
         "/dist/reload.js"
       ],
       "matches": [
-		"https://www.google.com/"
+		"http://pub.alimama.com/"
       ]
     }
   ]

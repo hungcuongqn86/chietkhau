@@ -13,10 +13,15 @@
                     <form id="search_form">
                         <div class="form-row">
                             <div class="col-12 col-md-9 mb-2 mb-md-0">
-                                <input type="text" class="form-control form-control-lg" id="url" name="url" placeholder="Nhập link sản phẩm cần mua...">
+                                <input type="text" class="form-control form-control-lg" required id="url" name="url" placeholder="Nhập link sản phẩm cần mua...">
                             </div>
                             <div class="col-12 col-md-3">
                                 <button id="btn-search" type="submit" class="btn btn-block btn-lg btn-primary">Tìm kiếm</button>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="col-12 col-md-12 mt-2 mb-md-0">
+                                <div id="url-warning" class="alert alert-danger text-left" role="alert" style="display: none;"></div>
                             </div>
                         </div>
                     </form>
@@ -122,8 +127,8 @@
                 </div>
                 <div class="modal-body" id="shareLinkModalBody"></div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Hủy bỏ</button>
                     <button type="button" class="btn btn-primary">Đi tới sản phẩm</button>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Hủy</button>
                 </div>
             </div>
         </div>

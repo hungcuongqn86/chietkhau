@@ -17,5 +17,5 @@ use Illuminate\Support\Facades\Route;
 Route::group([
     'namespace' => '\App\Http\Controllers'
 ], function () {
-    Route::get('/sharelink/{id}/{response?}', 'IndexController@shareLink');
+    Route::get('/sharelink/{response?}', 'IndexController@shareLink');
 });

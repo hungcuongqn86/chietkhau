@@ -22,13 +22,9 @@
                     </div>
                 </div>
             </div>
-
-            <div class="price-box chietkhau-box">
+            <div class="product-img-box">
+                <span class="rate">Chiết khấu: {{((double)$data->zk_final_price - (double)$data->coupon_amount)*(double)$data->commission_rate/10000}}¥</span>
                 <span class="price">Giá : {{$data->zk_final_price}}¥</span>
-                <span class="text-red text-bold price float-right">Chiết khấu: {{((double)$data->zk_final_price - (double)$data->coupon_amount)*(double)$data->commission_rate/10000}}¥</span>
-            </div>
-
-            <div class="">
                 <div class="product-img d-flex align-items-center">
                     <a href="/site/delaylink?web=1&amp;item_id=7675223939">
                         <img src="{{$data->pict_url}}" class="img-fluid mb-1">

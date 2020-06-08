@@ -60,7 +60,7 @@
                             <a class="nav-link" href="#">Tin tức</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Đơn hàng</a>
+                            <a class="nav-link" href="{{ url('/home') }}">Đơn hàng</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#">Rút tiền</a>

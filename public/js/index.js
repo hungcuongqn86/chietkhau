@@ -17,7 +17,7 @@ $(document).ready(function () {
             return;
         }
         showLoading();
-        var url = './sharelink/';
+        var url = './sharelink';
         $.ajax({
             url: url,
             type: 'GET',
@@ -34,6 +34,33 @@ $(document).ready(function () {
             },
             error: function (xhr, ajaxOptions, thrownError) {
                 hideLoading();
+            }
+        });
+    });
+
+    $(document).on('click', '.open-link', function (e) {
+        e.preventDefault();
+        const form = $('form#share_form');
+        const url = $(form).attr('action');
+        $.ajaxSetup({
+            headers: {
+                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+            }
+        });
+
+        $.ajax({
+            url: url,
+            type: 'POST',
+            dataType: 'json',
+            data: $(form).serialize(),
+            success: function (res) {
+                const url = res.url;
+                window.open(url, '_blank');
+                $('#shareLinkModal').modal('hide');
+                $('#url').val('').focus();
+            },
+            error: function (xhr, ajaxOptions, thrownError) {
+                // hideLoading();
             }
         });
     });

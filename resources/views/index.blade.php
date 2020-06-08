@@ -127,7 +127,7 @@
                 </div>
                 <div class="modal-body" id="shareLinkModalBody"></div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-primary">Đi tới sản phẩm</button>
+                    <button type="button" class="btn btn-primary open-link">Đi tới sản phẩm</button>
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Hủy</button>
                 </div>
             </div>

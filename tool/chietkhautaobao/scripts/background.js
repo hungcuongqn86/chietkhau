@@ -15,8 +15,6 @@ tite1()
 
 
 var requestHandlers = {
-
-
     global_set_store: function (data, callback, sender) {
         store.set(data.key, data.value);
     },
@@ -37,8 +35,8 @@ var requestHandlers = {
             callback(result);
         });
     },
-	
-	
+
+
 	taobao: function (data, callback, sender) {
 		return $.ajax({
 			url: 'https://chietkhau1688.vn/user-link/geturltaobao?url='+ data.url
@@ -62,9 +60,6 @@ var requestHandlers = {
             callback(result);
         });
     },
-
-
-
 }
 
 

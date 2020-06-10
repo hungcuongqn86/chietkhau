@@ -72,7 +72,13 @@ class IndexController extends Controller
             if (isset($data->coupon_amount)) {
                 $commissionValue = $commissionValue - (float)$data->coupon_amount;
             }
-            $commissionValue = round($commissionValue * (float)$data->commission_rate / 10000, 2);
+			
+			if (isset($data->commission_rate)) {
+				$commissionValue = round($commissionValue * (float)$data->commission_rate / 10000, 2);
+			}else{
+				$commissionValue = 0;
+			}
+            
             $refundRate = 80;
             $refundValue = round($commissionValue * $refundRate / 100, 2);
 
@@ -81,11 +87,11 @@ class IndexController extends Controller
                 'item_url' => $data->item_url,
                 'pict_url' => $data->pict_url,
                 'title' => $data->title,
-                'coupon_share_url' => $data->coupon_share_url,
+                'coupon_share_url' => isset($data->coupon_share_url)? $data->coupon_share_url: "",
                 'zk_final_price' => $data->zk_final_price,
-                'commission_rate' => $data->commission_rate,
-                'coupon_amount' => $data->coupon_amount,
-                'coupon_id' => $data->coupon_id,
+                'commission_rate' => isset($data->commission_rate)? $data->commission_rate: "0",
+                'coupon_amount' => isset($data->coupon_amount)? $data->coupon_amount: "0",
+                'coupon_id' => isset($data->coupon_id)? $data->coupon_id: "0",
                 'url' => $data->url,
                 'refund_rate' => $refundRate,
                 'refund_value' => $refundValue,
@@ -118,7 +124,11 @@ class IndexController extends Controller
                 if ($link->user_id == 0) {
                     $link->user_id = $user['id'];
                 }
-                $url = $link->coupon_share_url;
+				if(isset($data->coupon_share_url)){
+					$url = $link->coupon_share_url;
+				}else{
+					$url = $link->item_url;
+				}
             }
         }
 

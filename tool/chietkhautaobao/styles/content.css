@@ -1,0 +1,83 @@
+.clearfix:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden
+}
+
+
+
+.blocker{
+
+}
+#_zzz{
+
+
+    width: 100%;
+    height: 40px;
+    bottom: 0;
+    box-shadow: 0 -1px 2px #B8B8B8;
+    background: #DD4B39;
+    text-align: center;
+    padding-top: 5px;
+}
+
+#_zzz ._custom{
+    display: none;
+}
+
+#_zzz #_cart_quantity{
+    height: 32px;
+    width: 10%;
+    padding: 0 5px;
+    border: 1px solid #F9462C;
+}
+
+#_zzz #_cart_properties{
+    height: 32px;
+    width: 20%;
+    padding: 0 5px;
+    border: 1px solid #F9462C;
+}
+
+#_zzz #_cart_unit_price{
+    height: 32px;
+    width: 10%;
+    padding: 0 5px;
+    border: 1px solid #F9462C;
+}
+
+#_zzz #_cart_comment{
+    height: 32px;
+    width: 20%;
+    padding: 0 5px;
+    border: 1px solid #F9462C;
+}
+
+#_zzz #_cart_submit{
+    height: 32px;
+    padding: 0 5px;
+    background-color: #FFF2E8;
+    border: 1px solid #F9462C;
+}
+
+#_zzz #_cart_view{
+    height: 32px;
+    padding: 0 5px;
+    background-color: #FFF2E8;
+    border: 1px solid green;
+    color: green;
+    font-weight: bold;
+}
+
+#_zzz #_cart_label{
+    font-weight: bold;
+    font-size: 20pt;
+    color: #F9462C;
+    line-height: 1;
+}
+
+#_zzz #_cart_label::after{
+    content: " ₫";
+}

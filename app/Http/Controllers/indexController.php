@@ -63,6 +63,7 @@ class IndexController extends Controller
         $link = [];
         if (isset($resp->total_results) & ($resp->total_results > 0)) {
             $data = $resp->result_list->map_data[0];
+            dd($data);
             $userId = 0;
             if (Auth::guard()->check()) {
                 $user = Auth::user();
@@ -72,13 +73,13 @@ class IndexController extends Controller
             if (isset($data->coupon_amount)) {
                 $commissionValue = $commissionValue - (float)$data->coupon_amount;
             }
-			
+
 			if (isset($data->commission_rate)) {
 				$commissionValue = round($commissionValue * (float)$data->commission_rate / 10000, 2);
 			}else{
 				$commissionValue = 0;
 			}
-            
+
             $refundRate = 80;
             $refundValue = round($commissionValue * $refundRate / 100, 2);
 

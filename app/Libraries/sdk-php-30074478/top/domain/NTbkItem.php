@@ -18,77 +18,37 @@ class NTbkItem
 	public $cat_name;
 	
 	/** 
-	 * 是否包邮
+	 * 淘客地址
 	 **/
-	public $free_shipment;
+	public $click_url;
 	
 	/** 
-	 * 好评率是否高于行业均值
+	 * 佣金比例
 	 **/
-	public $h_good_rate;
+	public $commission_rate;
 	
 	/** 
-	 * 成交转化是否高于行业均值
+	 * couponAmount
 	 **/
-	public $h_pay_rate30;
+	public $coupon_amount;
 	
 	/** 
-	 * 退款率是否低于行业均值
+	 * 优惠券额度
 	 **/
-	public $i_rfd_rate;
+	public $coupon_price;
 	
 	/** 
-	 * 是否加入消费者保障
+	 * 优惠券使用门槛金额
 	 **/
-	public $is_prepay;
+	public $coupon_start_fee;
 	
 	/** 
-	 * 商品链接
+	 * 商品地址
 	 **/
 	public $item_url;
 	
 	/** 
-	 * 聚划算信息-聚淘结束时间（毫秒）
-	 **/
-	public $ju_online_end_time;
-	
-	/** 
-	 * 聚划算信息-聚淘开始时间（毫秒）
-	 **/
-	public $ju_online_start_time;
-	
-	/** 
-	 * 聚划算满减  -结束时间（毫秒）
-	 **/
-	public $ju_play_end_time;
-	
-	/** 
-	 * 聚划算满减  -开始时间（毫秒）
-	 **/
-	public $ju_play_start_time;
-	
-	/** 
-	 * 聚划算信息-商品预热结束时间（毫秒）
-	 **/
-	public $ju_pre_show_end_time;
-	
-	/** 
-	 * 聚划算信息-商品预热开始时间（毫秒）
-	 **/
-	public $ju_pre_show_start_time;
-	
-	/** 
-	 * 跨店满减信息
-	 **/
-	public $kuadian_promotion_info;
-	
-	/** 
-	 * 商品库类型，支持多库类型输出，以英文逗号分隔“,”分隔，1:营销商品主推库，2. 内容商品库，如果值为空则不属于1，2这两种商品类型
-	 **/
-	public $material_lib_type;
-	
-	/** 
-	 * 店铺名称
+	 * 卖家昵称
 	 **/
 	public $nick;
 	
@@ -103,49 +63,9 @@ class NTbkItem
 	public $pict_url;
 	
 	/** 
-	 * 1聚划算满减：满N件减X元，满N件X折，满N件X元）  2天猫限时抢：前N分钟每件X元，前N分钟满N件每件X元，前N件每件X元）
-	 **/
-	public $play_info;
-	
-	/** 
-	 * 预售商品-定金（元）
-	 **/
-	public $presale_deposit;
-	
-	/** 
-	 * 预售商品-商品优惠信息
-	 **/
-	public $presale_discount_fee_text;
-	
-	/** 
-	 * 预售商品-付定金结束时间（毫秒）
-	 **/
-	public $presale_end_time;
-	
-	/** 
-	 * 预售商品-付定金开始时间（毫秒）
-	 **/
-	public $presale_start_time;
-	
-	/** 
-	 * 预售商品-付定金结束时间（毫秒）
-	 **/
-	public $presale_tail_end_time;
-	
-	/** 
-	 * 预售商品-付尾款开始时间（毫秒）
-	 **/
-	public $presale_tail_start_time;
-	
-	/** 
-	 * 商品所在地
+	 * 宝贝所在地
 	 **/
 	public $provcity;
-	
-	/** 
-	 * 卖家等级
-	 **/
-	public $ratesum;
 	
 	/** 
 	 * 商品一口价格
@@ -153,19 +73,14 @@ class NTbkItem
 	public $reserve_price;
 	
 	/** 
-	 * 活动价
-	 **/
-	public $sale_price;
-	
-	/** 
 	 * 卖家id
 	 **/
 	public $seller_id;
 	
 	/** 
-	 * 店铺dsr 评分
+	 * 
 	 **/
-	public $shop_dsr;
+	public $shop_title;
 	
 	/** 
 	 * 商品小图列表
@@ -178,14 +93,9 @@ class NTbkItem
 	public $title;
 	
 	/** 
-	 * 天猫限时抢可售  -结束时间（毫秒）
+	 * 
 	 **/
-	public $tmall_play_activity_end_time;
-	
-	/** 
-	 * 天猫限时抢可售  -开始时间（毫秒）
-	 **/
-	public $tmall_play_activity_start_time;
+	public $tk_rate;
 	
 	/** 
 	 * 卖家类型，0表示集市，1表示商城
@@ -198,8 +108,13 @@ class NTbkItem
 	public $volume;
 	
 	/** 
-	 * 折扣价（元） 若属于预售商品，付定金时间内，折扣价=预售价
+	 * 商品折扣价格
 	 **/
-	public $zk_final_price;	
+	public $zk_final_price;
+	
+	/** 
+	 * 
+	 **/
+	public $zk_final_price_wap;	
 }
 ?>

@@ -64,6 +64,11 @@ $(document).ready(function () {
             }
         });
     });
+
+    $(document).on('click', '#token_url_btn', function (e) {
+        e.preventDefault();
+        copyTokenUrl();
+    });
 });
 
 function validURL(str) {
@@ -82,4 +87,14 @@ function showLoading() {
 
 function hideLoading() {
     $('.loading').hide();
+}
+
+function copyTokenUrl() {
+    /* Get the text field */
+    var copyText = document.getElementById("token_url");
+    /* Select the text field */
+    copyText.select();
+    copyText.setSelectionRange(0, 99999); /*For mobile devices*/
+    /* Copy the text inside the text field */
+    document.execCommand("copy");
 }

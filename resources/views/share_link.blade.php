@@ -20,9 +20,9 @@
                             <div class="input-group-prepend">
                                 <span class="input-group-text">Mobile</span>
                             </div>
-                            <input type="text" class="form-control alipay-link" value="￥xxxxxxxxxxx￥" readonly="">
+                            <input type="text" class="form-control alipay-link" name="token_url" id="token_url" value="{{!empty($data->token_url)? $data->token_url : ""}}" readonly="">
                             <div class="input-group-append">
-                                <button class="alipay-copy bg-info border-info white">copy</button>
+                                <button name="token_url_btn" id="token_url_btn" class="alipay-copy bg-info border-info white">copy</button>
                             </div>
                         </div>
                     </div>

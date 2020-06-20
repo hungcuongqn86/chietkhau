@@ -1,4 +1,21 @@
 <?php
+$arrHeader = getallheaders();
+if(isset($arrHeader['Referer'])){
+    $arrReferer = [
+        "https://detail.1688.com/offer",
+        "http://detail.1688.com/offer",
+        "https://item.taobao.com/item.htm",
+        "https://detail.tmall.com/item.htm"
+    ];
+    foreach ($arrReferer as $current) {
+        if(strpos($arrHeader['Referer'], $current) !== false) {
+            header('Access-Control-Allow-Origin: *');
+            header('Access-Control-Allow-Methods: *');
+            header('Access-Control-Allow-Headers: *');
+            break;
+        }
+    }
+}
 
 /*
 |--------------------------------------------------------------------------

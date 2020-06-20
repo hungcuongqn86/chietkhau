@@ -17,5 +17,5 @@ use Illuminate\Support\Facades\Route;
 Route::group([
     'namespace' => '\App\Http\Controllers'
 ], function () {
-    Route::get('/sharelink', 'ApiReqController@shareLink')->middleware('cors');
+    Route::get('/sharelink', 'ApiReqController@shareLink');
 });

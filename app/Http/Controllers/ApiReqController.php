@@ -66,7 +66,7 @@ class ApiReqController extends Controller
             }
 
             $refundRate = 80;
-            $refundValue = round($commissionValue * $refundRate / 100, 2);
+            $refundValue = number_format(round($commissionValue * $refundRate / 100, 2), 2);
 
             $link = [
                 'num_iid' => $data->num_iid,

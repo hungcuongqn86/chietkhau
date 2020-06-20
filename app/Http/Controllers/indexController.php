@@ -113,6 +113,79 @@ class IndexController extends Controller
         return view('share_link', ['data' => $link]);
     }
 
+    public function link(Request $request)
+    {
+
+        $input = $request->all();
+        $arrRules = [
+            'url' => 'required',
+        ];
+        $validator = Validator::make($input, $arrRules);
+        if ($validator->fails()) {
+            exit;
+        }
+
+        $req = new \TbkDgMaterialOptionalRequest;
+        $req->setPageSize("10");
+        $req->setPageNo("1");
+        $req->setCat("");
+        $req->setQ($input['url']);
+        $req->setAdzoneId(self::adzoneId);
+        $req->setMaterialId("6707");
+        $req->setIncludePayRate30("true");
+        $req->setIncludeGoodRate("true");
+        $req->setIncludeRfdRate("true");
+        $resp = $this->topClient->execute($req);
+        $link = [];
+        if (isset($resp->total_results) & ($resp->total_results > 0)) {
+            $data = $resp->result_list->map_data[0];
+            $userId = 0;
+            if (Auth::guard()->check()) {
+                $user = Auth::user();
+                $userId = $user['id'];
+            }
+            $commissionValue = (float)$data->zk_final_price;
+            if (isset($data->coupon_amount)) {
+                $commissionValue = $commissionValue - (float)$data->coupon_amount;
+            }
+
+            if (isset($data->commission_rate)) {
+                $commissionValue = round($commissionValue * (float)$data->commission_rate / 10000, 2);
+            } else {
+                $commissionValue = 0;
+            }
+
+            $refundRate = 80;
+            $refundValue = round($commissionValue * $refundRate / 100, 2);
+
+            $detail = self::curlInfo($data->num_iid);
+
+            $linkInput = [
+                'num_iid' => $data->num_iid,
+                'item_url' => $data->item_url,
+                'pict_url' => $data->pict_url,
+                'title' => $data->title,
+                'coupon_share_url' => isset($data->coupon_share_url) ? $data->coupon_share_url : "",
+                'zk_final_price' => $data->zk_final_price,
+                'commission_rate' => isset($data->commission_rate) ? $data->commission_rate : "0",
+                'coupon_amount' => isset($data->coupon_amount) ? $data->coupon_amount : "0",
+                'coupon_id' => isset($data->coupon_id) ? $data->coupon_id : "0",
+                'url' => $data->url,
+                'refund_rate' => $refundRate,
+                'refund_value' => $refundValue,
+                'status' => 1,
+                'commission_value' => $commissionValue,
+                'user_id' => $userId,
+                'coupon_token_short_url' => isset($detail['taoTokenInfo']) ? $detail['taoTokenInfo']['couponTokenShortUrl'] : "",
+                'token_url' => isset($detail['taoTokenInfo']) ? $detail['taoTokenInfo']['url'] : "",
+                'token_short_url' => isset($detail['taoTokenInfo']) ? $detail['taoTokenInfo']['tokenShortUrl'] : "",
+                'coupon_token_url' => isset($detail['taoTokenInfo']) ? $detail['taoTokenInfo']['couponUrl'] : ""
+            ];
+            $link = CommonServiceFactory::mLinkService()->create($linkInput);
+        }
+        return view('link', ['data' => $link]);
+    }
+
     private function curlInfo($id)
     {
         try {

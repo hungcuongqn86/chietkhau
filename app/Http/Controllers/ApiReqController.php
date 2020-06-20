@@ -70,7 +70,8 @@ class ApiReqController extends Controller
 
             $link = [
                 'num_iid' => $data->num_iid,
-                'refund_value' => $refundValue
+                'refund_value' => $refundValue,
+                'url' => $refundValue,
             ];
         }
         return response()->json($link);

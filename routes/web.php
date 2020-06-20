@@ -18,6 +18,7 @@ Route::group([
 ], function () {
     Route::get('/', 'IndexController@index');
     Route::get('/sharelink', 'IndexController@shareLink');
+    Route::get('/link', 'IndexController@link');
     Route::post('/openlink', 'IndexController@openlink');
 });
 

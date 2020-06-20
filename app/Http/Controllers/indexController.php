@@ -117,13 +117,13 @@ class IndexController extends Controller
     {
         try {
             $cookie_file = dirname(__FILE__) . '/' . 'cookie.txt';
-            $curl = curl_init();
+            /*$curl = curl_init();
             curl_setopt($curl, CURLOPT_URL, "http://pub.alimama.com/promo/search/index.htm?fn=search&showAllFilter=");
             curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
             curl_setopt($curl, CURLOPT_COOKIEFILE, $cookie_file);
             curl_setopt($curl, CURLOPT_COOKIEJAR, $cookie_file);
             curl_exec($curl);
-            curl_close($curl);
+            curl_close($curl);*/
 
             $url = "http://pub.alimama.com/openapi/param2/1/gateway.unionpub/shareitem.json?shareUserType=1&unionBizCode=union_pub&shareSceneCode=item_search&materialId=" . $id . "&tkClickSceneCode=qtz_pub_search&siteId=1414400150&adzoneId=110148550222&materialType=1&needQueryQtz=true";
             $curl = curl_init();

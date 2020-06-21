@@ -103,10 +103,10 @@ class IndexController extends Controller
                 'status' => 1,
                 'commission_value' => $commissionValue,
                 'user_id' => $userId,
-                'coupon_token_short_url' => isset($detail['taoTokenInfo']) ? $detail['taoTokenInfo']['couponTokenShortUrl'] : "",
-                'token_url' => isset($detail['taoTokenInfo']) ? $detail['taoTokenInfo']['url'] : "",
-                'token_short_url' => isset($detail['taoTokenInfo']) ? $detail['taoTokenInfo']['tokenShortUrl'] : "",
-                'coupon_token_url' => isset($detail['taoTokenInfo']) ? $detail['taoTokenInfo']['couponUrl'] : ""
+                'coupon_token_short_url' => isset($detail['taoTokenInfo']['couponTokenShortUrl']) ? $detail['taoTokenInfo']['couponTokenShortUrl'] : "",
+                'token_url' => isset($detail['taoTokenInfo']['url']) ? $detail['taoTokenInfo']['url'] : "",
+                'token_short_url' => isset($detail['taoTokenInfo']['tokenShortUrl']) ? $detail['taoTokenInfo']['tokenShortUrl'] : "",
+                'coupon_token_url' => isset($detail['taoTokenInfo']['couponUrl']) ? $detail['taoTokenInfo']['couponUrl'] : ""
             ];
             $link = CommonServiceFactory::mLinkService()->create($linkInput);
         }
@@ -176,10 +176,10 @@ class IndexController extends Controller
                 'status' => 1,
                 'commission_value' => $commissionValue,
                 'user_id' => $userId,
-                'coupon_token_short_url' => isset($detail['taoTokenInfo']) ? $detail['taoTokenInfo']['couponTokenShortUrl'] : "",
-                'token_url' => isset($detail['taoTokenInfo']) ? $detail['taoTokenInfo']['url'] : "",
-                'token_short_url' => isset($detail['taoTokenInfo']) ? $detail['taoTokenInfo']['tokenShortUrl'] : "",
-                'coupon_token_url' => isset($detail['taoTokenInfo']) ? $detail['taoTokenInfo']['couponUrl'] : ""
+                'coupon_token_short_url' => isset($detail['taoTokenInfo']['couponTokenShortUrl']) ? $detail['taoTokenInfo']['couponTokenShortUrl'] : "",
+                'token_url' => isset($detail['taoTokenInfo']['url']) ? $detail['taoTokenInfo']['url'] : "",
+                'token_short_url' => isset($detail['taoTokenInfo']['tokenShortUrl']) ? $detail['taoTokenInfo']['tokenShortUrl'] : "",
+                'coupon_token_url' => isset($detail['taoTokenInfo']['couponUrl']) ? $detail['taoTokenInfo']['couponUrl'] : ""
             ];
             $link = CommonServiceFactory::mLinkService()->create($linkInput);
         }

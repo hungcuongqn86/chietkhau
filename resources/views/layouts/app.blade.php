@@ -71,7 +71,7 @@
                 <!-- Right Side Of Navbar -->
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
-                        <a class="btn btn-primary" href="{{ route('login') }}">
+                        <a class="btn btn-primary" target="_blank" href="https://chrome.google.com/webstore/detail/chietkhautaobao/badkfmlmlnbffcpcmhdcekkomgcmpbfi">
                             <i class="fas fa-puzzle-piece fa-2x fa-fw" style="color: gold;"></i>
                             <br> Công cụ
                         </a>

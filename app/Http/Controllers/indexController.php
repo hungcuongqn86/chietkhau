@@ -37,6 +37,14 @@ class IndexController extends Controller
      */
     public function index()
     {
+        /*$req = new \TimeGetRequest;
+        $resp = $this->topClient->execute($req);
+        echo $resp->time;
+echo '<br>';
+        $date = new \DateTime();
+        $date->setTimezone(new \DateTimeZone('Asia/Shanghai'));
+        echo $date->format('Y-m-d H:i:s');*/
+
         return view('index');
     }
 

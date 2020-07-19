@@ -74,6 +74,7 @@ echo '<br>';
         $link = [];
         if (isset($resp->total_results) & ($resp->total_results > 0)) {
             $data = $resp->result_list->map_data[0];
+            // dd($data);
             $userId = 0;
             if (Auth::guard()->check()) {
                 $user = Auth::user();
@@ -94,7 +95,7 @@ echo '<br>';
             $refundValue = round($commissionValue * $refundRate / 100, 2);
 
             $detail = self::curlInfo($data->num_iid);
-
+            dd($detail);
             $linkInput = [
                 'num_iid' => $data->num_iid,
                 'item_url' => $data->item_url,
@@ -167,6 +168,7 @@ echo '<br>';
             $refundValue = round($commissionValue * $refundRate / 100, 2);
 
             $detail = self::curlInfo($data->num_iid);
+            dd($detail);
 
             $linkInput = [
                 'num_iid' => $data->num_iid,

@@ -1,5 +1,8 @@
 function displayTime() {
+    var d = new Date();
+    console.log(d.getTime());
 	location.reload();
 }
 
-const createClock = setInterval(displayTime, 300000);
+console.log(1111);
+const createClock = setInterval(displayTime, 100000);
